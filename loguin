@@ -1,0 +1,115 @@
+We need to design and implement the UI for the Login and Register pages in our web app. The web app is built as a Progressive Web App (PWA) using Laravel 11, Inertia.js, Vue.js, and Tailwind CSS. The design should be responsive and optimized for both desktop and mobile views, with a focus on delivering a native-like user experience typical of PWAs.
+
+Since this app will behave like a mobile application when installed as a PWA, we need to incorporate mobile app-like elements, such as a hamburger menu, and ensure a smooth and intuitive user experience. The login and registration flows must be simple, user-friendly, and in line with current design trends.
+
+Acceptance Criteria:
+1. Research & Design:
+Research examples of modern login and registration UI/UX (both web and mobile apps) and present a few options or inspiration for the look and feel.
+The design must be responsive (support desktop, mobile, and tablet views).
+Ensure the design fits well with a PWA experience (i.e., it should feel like a mobile app when viewed on mobile devices).
+Focus on minimalism, ease of use, and clean navigation.
+Use Tailwind CSS for all styling. Stick to utility-first principles.
+Present wireframes/mockups (using a tool like Figma or similar) for both login and registration screens.
+Include PWA-related UI elements like a hamburger menu, and follow mobile-first design principles.
+2. Header & Navigation:
+Design and implement a header with a hamburger menu for mobile and tablet views.
+The header should include space for branding (e.g., app name or logo) and a hamburger menu icon.
+On larger screens (desktop), this can shift to a top bar with navigation links as appropriate.
+The hamburger menu should slide out or use a modal-like dropdown to show the available options (even though Login and Register might be the only immediate options).
+Ensure the header works across all views: desktop, tablet, and mobile.
+3. Login Page:
+Simple form with:
+Email input
+Password input
+"Remember Me" checkbox
+Submit button
+Error messaging should be handled clearly, with Tailwind-based UI elements for invalid inputs (e.g., red borders, error messages).
+Ensure accessibility features (e.g., focus states, keyboard navigation).
+Style the form using Tailwind components with a modern design that is consistent with PWA and mobile-first design standards.
+Include a link to the registration page ("Don't have an account? Register").
+Implement any necessary form validation and error states using Vue.
+4. Register Page:
+Form fields:
+Name input
+Email input
+Password input
+Confirm password input
+Submit button
+Error handling should mirror the login page (clear, accessible feedback for invalid inputs).
+Style the form similarly to the login page to maintain design consistency.
+Include a link to the login page ("Already have an account? Login").
+Implement form validation using Vue.
+5. PWA Considerations:
+Ensure that the user experience for both login and registration pages feels like a native mobile app when accessed on mobile devices.
+Pages should load quickly and work seamlessly offline once the app is installed as a PWA (ensure placeholders for service worker integration in future tasks).
+Add any necessary PWA-specific meta tags to the head section (e.g., manifest, theme-color) for the login and register pages.
+6. Implementation:
+Implement the designed UI using the latest versions of Inertia.js, Vue.js, and Tailwind CSS.
+Set up the appropriate routes and Inertia pages in Laravel 11 for both login and registration.
+Ensure that the forms are fully functional and integrated with Laravel's authentication system.
+7. Testing:
+Thoroughly test the login and registration UI on various devices (desktop, tablet, and mobile).
+Ensure everything works as expected on different screen sizes and that the PWA behaves like a native app when installed.
+Perform cross-browser testing (Chrome, Firefox, Safari) and test on mobile (iOS and Android).
+
+Follow this project structure:
+your-project/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   └── Middleware/
+│   ├── Models/
+│   └── ...
+│
+├── bootstrap/
+│
+├── config/
+│
+├── database/
+│
+├── public/
+│   ├── index.php
+│   ├── favicon.ico
+│   ├── robots.txt
+│   ├── manifest.json
+│   └── service-worker.js
+│
+├── resources/
+│   ├── css/
+│   │   └── app.css
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── Components/
+│   │   │   ├── HamburgerMenu.vue
+│   │   │   └── ...
+│   │   ├── Layouts/
+│   │   │   ├── AppLayout.vue
+│   │   │   └── AuthLayout.vue
+│   │   └── Pages/
+│   │       ├── Auth/
+│   │       │   ├── Login.vue
+│   │       │   └── Register.vue
+│   │       ├── Dashboard.vue
+│   │       └── ...
+│   └── views/
+│       └── app.blade.php
+│
+├── routes/
+│   ├── web.php
+│   └── api.php
+│
+├── storage/
+│
+├── tests/
+│
+├── vendor/
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── artisan
+├── composer.json
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
