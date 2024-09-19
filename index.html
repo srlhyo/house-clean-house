@@ -1,61 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeRoomies Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h1 {
-            text-align: center;
-            color: #1877f2;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border: 1px solid #dddfe2;
-            border-radius: 6px;
-        }
-        button {
-            background-color: #1877f2;
-            color: white;
-            padding: 0.5rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #166fe5;
-        }
-    </style>
-  </head>
-  <body>
-    <div class="login-container">
-        <h1>BeRoomies Login</h1>
-        <form>
-            <input type="text" placeholder="Username or Email" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Log In</button>
-        </form>
-    </div>
-  </body>
+    <title>CleanCube</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                <path d="M12 9v4" />
+                <path d="M12 17h.01" />
+            </svg>
+            <span>CleanCube</span>
+        </div>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+        </nav>
+        <button class="sign-up">Sign Up</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Share your cleaning tasks, split the costs, and collaborate with housemates</h1>
+            <p>The all-in-one cleaning platform where you can easily manage household responsibilities, split expenses, and foster teamwork.</p>
+            <button class="cta">Manage Tasks</button>
+            <div class="brand-logos">
+                <img src="images/brand1.png" alt="Brand logo">
+                <img src="images/brand2.png" alt="Brand logo">
+                <img src="images/brand3.png" alt="Brand logo">
+                <img src="images/brand4.png" alt="Brand logo">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-content">
+                <h2>Streamline Household Responsibilities</h2>
+                <p>Organize your shared living space effectively, set cleaning plans you can stick to, and ensure everyone contributes fairly to maintaining a clean and comfortable home.</p>
+            </div>
+            <img src="images/clean-kitchen.jpg" alt="Clean kitchen" class="feature-image">
+        </section>
+
+        <section class="cleaning-tips">
+            <h2>Cleaning Tips</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Daily Quick Clean</h3>
+                    <p>Spend 15 minutes each day tidying up to maintain a consistently clean space.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Eco-Friendly Products</h3>
+                    <p>Use natural cleaning solutions to reduce environmental impact and improve air quality.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Declutter Regularly</h3>
+                    <p>Set aside time each month to declutter and organize your living spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="shared-living">
+            <h2>Create a Thriving Shared Living</h2>
+            <p>Cultivate a sense of community and shared responsibility in your living space. Manage expenses fairly and foster an environment of collaboration.</p>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <img src="images/cleaning-tutorial.jpg" alt="Cleaning tutorial">
+                    <h3>Cleaning Tutorials</h3>
+                    <p>Access step-by-step guides for efficient cleaning techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/cost-sharing.jpg" alt="Cost-sharing guidance">
+                    <h3>Cost-Sharing Guidance</h3>
+                    <p>Learn how to fairly divide expenses among housemates.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/community.jpg" alt="Community engagement">
+                    <h3>Community Engagement</h3>
+                    <p>Connect with other users and share cleaning tips and tricks.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Start Your Journey</h2>
+            <p>Join our community and transform your shared living experience today!</p>
+            <div class="cta-buttons">
+                <button class="cta-primary">Create Account</button>
+                <button class="cta-secondary">Learn More</button>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="link-column">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="link-column">
+                <h3>Resources</h3>
+                <a href="#">Blog</a>
+                <a href="#">Cleaning Guides</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="link-column">
+                <h3>Legal</h3>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="link-column">
+                <h3>Connect with Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>
