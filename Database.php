@@ -3,19 +3,47 @@
 class Database
 {
     public $connection;
+    public $statement;
 
-    public function __construct() {
+    public function __construct($config, $username='root', $password='') {
 
-        $dsn = "mysql:host=localhost;dbname=cleaning;charset=utf8mb4";
+        // $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};surname={$config['surname']};password={$config['password']};charset={$config['charset']}";   
+        $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};charset={$config['charset']}";   
 
-        $this->connection = new PDO($dsn, 'root', 'abc123');
+        try {
+            $this->connection = new PDO($dsn,$username, $password, options: [
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            ]);
+        } catch(PDOException $e) {
+            echo 'Connection failed: ' . $e->getMessage();
+            die();
+        }
     }
 
-    public function query($sql)
+    public function query($sql, $params = [])
     {
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
+        $this->statement = $this->connection->prepare($sql);
+        $this->statement->execute($params);
         
-        return $statement;
-    }   
+        return $this;
+    }  
+    
+    public function find() {
+        return $this->statement->fetch();
+    }
+
+    public function findOrFail()
+    {
+        $result = $this->find();
+        if(! $result) {
+            abort();
+        }
+
+        return $result;
+    }
+
+    public function get()
+    {
+        return $this->statement->fetchAll();
+    }
 }

@@ -10,3 +10,10 @@ function dd($data) {
 function isUrl($value) {
     return parse_url($_SERVER['REQUEST_URI'])['path'] == $value;
 }
+
+function authorize($condition)
+{
+    if(! $condition) {
+        abort(Response::FORBIDDEN);
+    }
+}
