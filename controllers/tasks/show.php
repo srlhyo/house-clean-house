@@ -15,4 +15,4 @@ $currentId = 1;
 
 authorize($task['user_id'] == $currentId);
 
-require 'views/task.view.php';
+require 'views/tasks/show.view.php';
