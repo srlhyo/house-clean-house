@@ -12,6 +12,9 @@
                 </li>
             <?php endforeach;?>
         </ul>
+        <div class="pt-6">
+            <a href="/tasks/create" class="hover:underline hover:text-blue-500">Create Task</a>
+        </div>
     </div>
 </main>
 

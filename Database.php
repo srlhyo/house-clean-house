@@ -6,8 +6,6 @@ class Database
     public $statement;
 
     public function __construct($config, $username='root', $password='') {
-
-        // $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};surname={$config['surname']};password={$config['password']};charset={$config['charset']}";   
         $dsn = "mysql:host={$config['host']};dbname={$config['dbname']};charset={$config['charset']}";   
 
         try {
