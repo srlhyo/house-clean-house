@@ -1,6 +1,6 @@
-<?php require('views/partials/head.php') ?>
-<?php require('views/partials/nav.php') ?>  
-<?php require('views/partials/banner.php') ?> 
+<?php require base_path('views/partials/head.php') ?>
+<?php require base_path('views/partials/nav.php') ?>  
+<?php require base_path('views/partials/banner.php') ?> 
 
 <!-- Main content -->
 <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
@@ -9,5 +9,5 @@
     </div>
 </main>
 
-<?php require('views/partials/nav-profile.php') ?>
-<?php require('views/partials/footer.php') ?>               
+<?php require base_path('views/partials/nav-profile.php') ?>
+<?php require base_path('views/partials/footer.php') ?>               

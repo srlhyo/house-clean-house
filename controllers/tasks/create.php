@@ -3,14 +3,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require 'Validation.php';
-
-$config = require ('config.php');
+$config = require base_path('config.php');
 $db = new Database($config, password: 'abc123');
+
+$errors = [];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // validation
-    $errors = [];
 
     if(! Validation::str($_POST['description'], 1, 20)) {
         $errors['description'] = 'Description is no more than 20 characters';
@@ -27,4 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $heading = 'Create Task';   
 
-require 'views/tasks/create.view.php';
+view('tasks/create.view.php', [
+    'errors' => $errors,
+    'heading' => 'Create Task'
+]);
