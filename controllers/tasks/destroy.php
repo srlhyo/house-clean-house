@@ -15,8 +15,9 @@ $task = $db->query("select * from tasks where id = :id", ["id" => $_GET["id"]])-
 
 authorize($task['user_id'] == $currentId);
 
-view('tasks/show.view.php', [
-    'task' => $task,
-    'heading' => 'Task'
+$db->query("delete from tasks where id = :id", [
+    "id" => $_POST['id'],
 ]);
 
+header('location: /tasks');
+exit();

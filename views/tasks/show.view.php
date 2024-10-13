@@ -8,6 +8,7 @@
         <a href="/tasks" class="underline text-blue-500">Go back...</a>
         <p class="py-6"><?= htmlspecialchars($task['description']) ?></p>
         <form action="" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="id" value=<?= $task['id']?>>
             <button type="submit" class="text-xs text-red-500">Delete</button>
         </form>
