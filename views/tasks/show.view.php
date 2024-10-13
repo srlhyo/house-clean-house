@@ -5,7 +5,8 @@
 <!-- Main content -->
 <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p><?= htmlspecialchars($task['description']) ?></p>
+        <a href="/tasks" class="underline text-blue-500">Go back...</a>
+        <p class="pt-6"><?= htmlspecialchars($task['description']) ?></p>
     </div>
 </main>
 
