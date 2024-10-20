@@ -1,13 +1,13 @@
 <?php
 
+use Core\App;
 use Core\Database;
 use Core\Validation;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$config = require base_path('config.php');
-$db = new Database($config, password: 'abc123');
+$db = App::resolve(Database::class);
 
 $errors = [];
 
